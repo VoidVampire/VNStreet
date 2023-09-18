@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= local.title %></title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-black text-white">
+    <section class="mx-auto px-4 sm:px-5 xl:max-w-6xl xl:px-1">
+        <div class="flex h-screen flex-col">
+            <%- include('./partial/header_admin.ejs') %>
+            <main>
+                <a href="/dashboard" class="texr-xl font-bold">&larr; Back</a>
+                <div class="py-15">
+                    <div>
+                        <div class="underline text-3xl font-extrabold text-white">Add new post</div>
+                    </div>
+                </div>    <br /><br />
+                <form action="/add-post" method="POST">
+                    <div >
+                        <label for="title" class="text-xl font-bold">Title:&nbsp;&nbsp;</label>
+                        <input type="text" class="text-gray-950" placeholder="Post Title" name="title" >
+                    </div> <br />
+                    <div >
+                        <label for="tags" class="text-xl font-bold">Tags:&nbsp;&nbsp;</label>
+                        <input type="text" class="text-gray-950" placeholder="Tags" name="tags">
+                    </div> <br />
+                    <div >
+                        <label for="banner" class="text-xl font-bold">Banner:&nbsp;&nbsp;</label>
+                        <input type="text" class="text-gray-950" placeholder="Post Banner" name="banner" >
+                    </div> <br />
+                    <div">
+                        <p class="text-xl font-bold"> Content :</p>
+                        <textarea name="body" class="text-gray-950" placeholder="Content" cols="60" rows="10" ></textarea> <br /><br />
+                        <input type="submit" value="Add" class="bg-purple-500 rounded-md px-4 py-2 font-medium text-white">
+                    </div>
+                    <div>
+
+                    </div>
+
+                </form>
+            </main>
+
+            <%- include('./partial/footer.ejs') %>
+        </div>
+    </section>
+</body>
+</html>

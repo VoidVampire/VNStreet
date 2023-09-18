@@ -1,0 +1,4 @@
+*.lockb
+*.db
+sessions
+node_modules/

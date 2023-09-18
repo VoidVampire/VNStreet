@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= local.title %></title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-black text-white">
+    <section class="mx-auto px-4 sm:px-5 xl:max-w-6xl xl:px-1">
+        <div class="flex h-screen flex-col">
+            <%- include('./partial/header.ejs') %>
+                <main class="mb-auto">
+                    <div class="divide-y divide-gray-700">
+                        <div class="space-y-2 pb-8 pt-6 md:space-y-5">
+                            <h1 class="text-3xl font-extrabold text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">About</h1>
+                        </div>
+                        <div class="items-start space-y-2 xl:grid xl:grid-cols-3 xl:gap-x-8 xl:space-y-0">
+                            <div class="flex flex-col items-center space-x-2 pt-8"> 
+                                <h3 class="pb-2 pt-4 text-2xl font-bold leading-8 tracking-tight">Yash Singh</h3>
+                                <div class="text-gray-500 dark:text-gray-400">Computer Science Engineering Student @</div>
+                                <div class="text-gray-500 dark:text-gray-400">VIT Chennai</div>
+                            </div>
+                            <div class="pb-8 pt-8 xl:col-span-2">
+                                <p>Hi, this is Yash Dinesh Singh. This is somewhat my first Full Stack Application which I have tried to run with some manageable features. </p> <br >
+                                <p>I used Express.js (since I couldn't make Elysia work), SQLite, Tailwind CSS and Bun to run it all.</p>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+
+            <%- include('./partial/footer.ejs') %>
+        </div>
+    </section>
+</body>
+</html>
+    

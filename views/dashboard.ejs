@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= local.title %></title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-black text-white">
+    <section class="mx-auto px-4 sm:px-5 xl:max-w-6xl xl:px-1">
+        <div class="flex h-screen flex-col">
+            <%- include('./partial/header_admin.ejs') %>
+            
+            <main class="mb-auto">
+                <div class="space-y-2 py-5 md:space-y-5">
+                    <h1 class="font-bold text-gray-100 py-5 sm:text-4xl sm:leading-10 md:text-3xl md:leading-14">Dashboard</h1>
+                    <a href="/add-post" class="text-xl font-bold underline">+ Add Post</a>
+                </div>
+                <div class="py-3 flex items-center justify-between">
+                    <ul>
+                        
+                        
+                        <% data.forEach(post => { %>
+                            <li>
+                                <article class="flex flex-row my-10 xl:space-y-0">
+                                    <div>
+                                        <p class="text-xl font-bold pr-10">
+                                        <a class="text-gray-100" href="/blog/<%= post.url %>"> &#8614; &nbsp; <%= post.title %> </a>
+                                        </p>
+                                    </div>
+                                    <div class="text-xl font-bold text-gray-400 flex flex-row">
+                                        <a href="/edit-post/<%= post.url %>" class="underline">Edit</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <form action="/delete-post/<%= post.id %>?_method=DELETE" method="post">
+                                            <input type="submit" value="Delete" class="text-xl underline italic font-extrabold text-gray-300">
+                                        </form>
+                                    </div>
+                                </article>
+                            </li>
+                            
+                        <% }) %>
+                    </ul>
+                </div>
+            </main>
+
+            <%- include('./partial/footer.ejs') %>
+        </div>
+    </section>
+</body>
+</html>
