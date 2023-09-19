@@ -22,10 +22,7 @@ VNStreet is a full-stack blog application built using Express.js, SQLite, Tailwi
 
 ## Prerequisites
 
-Before you begin, ensure you have met the following requirements:
-
-- bun installed on your machine.
-- Git installed on your machine (for cloning the repository).
+Before you begin, ensure you have installed [bun](https://bun.sh/) and git.
 
 ## Installation
 
@@ -34,7 +31,7 @@ To get VNStreet up and running on your local machine, follow these steps:
 1. Clone the repository:
 
    ```bash
-   https://github.com/VoidVampire/VNStreet.git
+   git clone https://github.com/VoidVampire/VNStreet.git
    cd VNStreet
    ```
 
